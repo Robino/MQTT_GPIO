@@ -1,0 +1,12 @@
+[Unit]
+  Description=Controle remote GPIO by MQTT
+  [Service]
+  EnvironmentFile=
+  Type=forking
+  ExecStart=/home/pi/MQTT_GPIO/MQTT_GPIO.py
+  TimeoutSec=0
+  StandardOutput=tty
+  RemainAfterExit=yes
+  Restart=always
+  [Install]
+  WantedBy=multi-user.target
